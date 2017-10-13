@@ -54,6 +54,7 @@ function addKeyListeners() {
 	keypress.register_combo({
 		keys: "enter",
 		on_keydown: function() {
+
 			if (gameState==1 || importing == 1) {
 				init(1);
 			}

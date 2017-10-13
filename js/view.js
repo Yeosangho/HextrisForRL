@@ -122,12 +122,14 @@ function showText(text) {
 }
 
 function setMainMenu() {
+	
 	gameState = 4;
 	canRestart = false;
 	setTimeout(function() {
 		canRestart = 's';
 	}, 500);
 	$('#restartBtn').hide();
+
 	if ($("#pauseBtn").replace(/^.*[\\\/]/, '') == "btn_pause.svg") {
 		$("#pauseBtn").attr("src","./images/btn_resume.svg");
 	} else {
@@ -170,6 +172,7 @@ function updateHighScores (){
 
 var pausable = true;
 function pause(o) {
+   $("#pauseBtn").hide();
     if (gameState == 0 || gameState == 2 || !pausable) {
         return;
     }

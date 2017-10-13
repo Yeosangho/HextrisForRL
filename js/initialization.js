@@ -1,7 +1,11 @@
 $(document).ready(function() {
 	initialize();
+
 });
+
+
 function initialize(a) {
+
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
@@ -27,10 +31,10 @@ function initialize(a) {
 		"rgb(46,204,113)": "rgb(150,227,183)"
 	};
 
-	window.hexagonBackgroundColor = 'rgb(236, 240, 241)';
+	window.hexagonBackgroundColor = 'rgb(255, 255, 255)';
 	window.hexagonBackgroundColorClear = 'rgba(236, 240, 241, 0.5)';
 	window.centerBlue = 'rgb(44,62,80)';
-	window.angularVelocityConst = 4;
+	window.angularVelocityConst = 100;
 	window.scoreOpacity = 0;
 	window.textOpacity = 0;
 	window.prevGameState = undefined;

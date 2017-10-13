@@ -1,3 +1,7 @@
+function getMainHex(){
+	return window.MainHex;
+}
+
 function scaleCanvas() {
 	canvas.width = $(window).width();
 	canvas.height = $(window).height();
@@ -60,7 +64,7 @@ function toggleDevTools() {
 function resumeGame() {
 	gameState = 1;
 	hideUIElements();
-	$('#pauseBtn').show();
+	$('#pauseBtn').hide();
 	$('#restartBtn').hide();
 	importing = 0;
 	startTime = Date.now();
@@ -125,7 +129,7 @@ function init(b) {
 	scoreOpacity = 0;
 	gameState = 1;
 	$("#restartBtn").hide();
-	$("#pauseBtn").show();
+
 	if (saveState.hex !== undefined) gameState = 1;
 
 	settings.blockHeight = settings.baseBlockHeight * settings.scale;
@@ -269,6 +273,7 @@ function animLoop() {
 			canRestart = 0;
 			clearSaveState();
 		}
+		$('#pauseBtn').hide();
 		break;
 
 	case 0:

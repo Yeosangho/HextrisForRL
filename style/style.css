@@ -209,6 +209,7 @@ button:focus {
 }
 
 #highScoreInGameText {
+	display : none;
 	position: absolute;
 	top:10px;
 	text-align: center;
@@ -250,10 +251,12 @@ button:focus {
 		height:60px;
 	}
 	#pauseBtn {
+		display : none;
 		width:60px;
 		height:60px;
 	}
 	#restartBtn {
+		display : none;
 		width:60px;
 		height:60px;
 	}

@@ -53,11 +53,11 @@ function calcSide(startVertex,endVertex,fraction,offset){
 }
 function drawSide(vertexes){
 	if (gameState === 0) {
-		ctx.strokeStyle = hexColorsToTintedColors[MainHex.lastColorScored];
+		ctx.strokeStyle = 'rgb(0,0,0)';
 	} else {
-		ctx.strokeStyle = MainHex.lastColorScored;
+		ctx.strokeStyle = 'rgb(0,0,0)';
 	}
-	ctx.lineWidth =4*settings.scale;
+	ctx.lineWidth = 16*settings.scale;
 		ctx.moveTo(vertexes[0][0][0],vertexes[0][0][1]);
 	ctx.lineTo(vertexes[0][1][0],vertexes[0][1][1]);
 		for(var i=1;i<vertexes.length;i++){
