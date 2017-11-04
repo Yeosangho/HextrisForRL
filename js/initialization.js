@@ -58,7 +58,7 @@ function initialize(a) {
 			os: "other",
 			platform: "mobile",
 			startDist: 227,
-			creationDt: 60,
+			creationDt: 180,
 			baseScale: 1.4,
 			scale: 1,
 			prevScale: 1,
@@ -67,8 +67,8 @@ function initialize(a) {
 			baseBlockHeight: 20,
 			blockHeight: 20,
 			rows: 7,
-			speedModifier: 0.73,
-			creationSpeedModifier: 0.73,
+			speedModifier: 10000,
+			creationSpeedModifier: 0.7,
 			comboTime: 310
 		};
 	} else {
@@ -77,7 +77,7 @@ function initialize(a) {
 			platform: "nonmobile",
 			baseScale: 1,
 			startDist: 340,
-			creationDt: 9,
+			creationDt: 27,
 			scale: 1,
 			prevScale: 1,
 			hexWidth: 65,
@@ -85,8 +85,8 @@ function initialize(a) {
 			baseBlockHeight: 20,
 			blockHeight: 15,
 			rows: 8,
-			speedModifier: 0.65,
-			creationSpeedModifier: 0.65,
+			speedModifier: 10000,
+			creationSpeedModifier: 0.6,
 			comboTime: 310
 		};
 

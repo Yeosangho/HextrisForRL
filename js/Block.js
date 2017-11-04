@@ -105,10 +105,10 @@ function Block(fallingLane, color, iter, distFromHex, settled) {
 			if (rat > 1) {
 				rat = 1;
 			}
-			p1 = rotatePoint((-this.width / 2) * rat, this.height / 2, this.angle);
-			p2 = rotatePoint((this.width / 2) * rat, this.height / 2, this.angle);
-			p3 = rotatePoint((this.widthWide / 2) * rat, -this.height / 2, this.angle);
-			p4 = rotatePoint((-this.widthWide / 2) * rat, -this.height / 2, this.angle);
+			p1 = rotatePoint((-this.width / 2) * 1, this.height / 2, this.angle);
+			p2 = rotatePoint((this.width / 2) * 1, this.height / 2, this.angle);
+			p3 = rotatePoint((this.widthWide / 2) * 1, -this.height / 2, this.angle);
+			p4 = rotatePoint((-this.widthWide / 2) * 1, -this.height / 2, this.angle);
 			if ((MainHex.ct - this.ict) >= this.initLen) {
 				this.initializing = 0;
 			}
