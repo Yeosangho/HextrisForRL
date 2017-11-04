@@ -1,3 +1,7 @@
+var isCombo =0;
+function getComboTime(){
+	return isCombo;
+}
 function search(twoD,oneD){
 	// Searches a two dimensional array to see if it contains a one dimensional array. indexOf doesn't work in this case
 	for(var i=0;i<twoD.length;i++){
@@ -37,6 +41,7 @@ function floodFill(hex, side, index, deleting) {
 	}
 }
 
+
 function consolidateBlocks(hex,side,index){
 	//record which sides have been changed
 	var sidesChanged =[];
@@ -64,19 +69,25 @@ function consolidateBlocks(hex,side,index){
 	}
 
 	// add scores
-	var now = MainHex.ct;
+	now = MainHex.ct;
+	
 	if(now - hex.lastCombo < settings.comboTime ){
 		settings.comboTime = (1/settings.creationSpeedModifier) * (waveone.nextGen/16.666667) * 3;
 		hex.comboMultiplier += 1;
 		hex.lastCombo = now;
 		var coords = findCenterOfBlocks(deletedBlocks);
 		hex.texts.push(new Text(coords['x'],coords['y'],"x "+hex.comboMultiplier.toString(),"bold Q","#fff",fadeUpAndOut));
+		isCombo = 1;
+		console.log(1);
 	}
 	else{
 		settings.comboTime = 240;
 		hex.lastCombo = now;
 		hex.comboMultiplier = 1;
+		isCombo = 0;
+		console.log(0);
 	}
+			
 	var adder = deleting.length * deleting.length * hex.comboMultiplier;
 	hex.texts.push(new Text(hex.x,hex.y,"+ "+adder.toString(),"bold Q ",deletedBlocks[0].color,fadeUpAndOut));
 		hex.lastColorScored = deletedBlocks[0].color;

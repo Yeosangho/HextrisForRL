@@ -1,4 +1,12 @@
-
+function getIsCombo(){
+	now = MainHex.ct;
+	if(now - MainHex.lastCombo < settings.comboTime ){
+		return 1;	
+	}
+	else{
+		return 0;	
+	}
+}
 //remember to update history function to show the respective iter speeds
 function update(dt) {
 	MainHex.dt = dt;
