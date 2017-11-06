@@ -58,7 +58,7 @@ function initialize(a) {
 			os: "other",
 			platform: "mobile",
 			startDist: 227,
-			creationDt: 180,
+			creationDt: 720,
 			baseScale: 1.4,
 			scale: 1,
 			prevScale: 1,
@@ -77,7 +77,7 @@ function initialize(a) {
 			platform: "nonmobile",
 			baseScale: 1,
 			startDist: 340,
-			creationDt: 27,
+			creationDt: 108,
 			scale: 1,
 			prevScale: 1,
 			hexWidth: 65,
@@ -140,7 +140,7 @@ function initialize(a) {
 		window.canRestart = 1;
 		window.onblur = function(e) {
 			if (gameState == 1) {
-				pause();
+				//pause();
 			}
 		};
 		$('#startBtn').off();
